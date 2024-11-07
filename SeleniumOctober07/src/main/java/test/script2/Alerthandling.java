@@ -39,8 +39,8 @@ public class Alerthandling extends Base{
 	public static void main(String[] args) {
 		Alerthandling alerthandling =new Alerthandling();
 		alerthandling.initializeBrowser();
-		//alerthandling.simpleAlert();
-		alerthandling.promptAlert();
+		alerthandling.simpleAlert();
+		//alerthandling.promptAlert();
 		//alerthandling.confirmationAlert();
 		//alerthandling.driverQuitAndClose();
 

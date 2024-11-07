@@ -28,9 +28,9 @@ public class Dropdown extends Base{
 	public static void main(String[] args) {
 		Dropdown dropdown=new Dropdown();
 		dropdown.initializeBrowser();
-		//dropdown.index();
+		dropdown.index();
 		//dropdown.value();
-		dropdown.visibleText();
+		//dropdown.visibleText();
 		//dropdown.driverQuitAndClose();
 		
 		
