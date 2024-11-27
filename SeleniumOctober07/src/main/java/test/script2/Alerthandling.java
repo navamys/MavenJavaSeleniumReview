@@ -1,7 +1,12 @@
 package test.script2;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import test.script.Base;
 
@@ -31,18 +36,28 @@ public class Alerthandling extends Base{
 		driver.navigate().to("https://selenium.qabible.in/javascript-alert.php");
 		WebElement yellowbutton=driver.findElement(By.xpath("//button[@onclick='jsConfirm()']"));
 		yellowbutton.click();
-		//driver.switchTo().alert().accept();
-		driver.switchTo().alert().dismiss();
+		/*driver.navigate().to("https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm"); 
+		WebElement tryitbutton=driver.findElement(By.xpath("//button[text()='Try it']"));
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(tryitbutton));
+		tryitbutton.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click();",tryitbutton);*/
+		driver.switchTo().alert().accept();
+		//driver.switchTo().alert().dismiss();
 	}
+	
+		
 	
 
 	public static void main(String[] args) {
 		Alerthandling alerthandling =new Alerthandling();
 		alerthandling.initializeBrowser();
-		alerthandling.simpleAlert();
+		//alerthandling.simpleAlert();
 		//alerthandling.promptAlert();
-		//alerthandling.confirmationAlert();
+		alerthandling.confirmationAlert();
 		//alerthandling.driverQuitAndClose();
+		
 
 	}
 
