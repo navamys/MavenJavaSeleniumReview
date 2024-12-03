@@ -1,5 +1,7 @@
 package test.script;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -37,17 +39,28 @@ public class Locators extends Base{
 		WebElement element14=driver.findElement(By.partialLinkText("Simple F"));//simple have duplicate but simple f is unique
 		WebElement element15=driver.findElement(By.partialLinkText("Checkbox D"));
 	}
-	
+	public void linkCountUsingTagname() {
+		driver.navigate().to("https://selenium.qabible.in/table-pagination.php");
+		List<WebElement> links=driver.findElements(By.tagName("a"));
+		System.out.println(links.size());
+	}
+	public void imageCountUsingTagname() {
+		driver.navigate().to("https://selenium.qabible.in/table-pagination.php");
+		List<WebElement> images=driver.findElements(By.tagName("img"));
+		System.out.println(images.size());
+	}
 	
 
 	public static void main(String[] args) {
 		Locators locators=new Locators();
 		locators.initializeBrowser();
-		locators.id();
-		locators.className();
-		locators.name();
-		locators.linkText();
-		locators.partialLinkText();
+		//locators.id();
+		//locators.className();
+		//locators.name();
+		//locators.linkText();
+		//locators.partialLinkText();
+		locators.linkCountUsingTagname();
+		locators.imageCountUsingTagname();
 		locators.driverQuitAndClose();
 
 	}

@@ -60,10 +60,10 @@ public class Tablehandling extends Base{
 		//tablehandling.printTable();
 		//tablehandling.printrRow();
 		//tablehandling.printCell();
-		//tablehandling.printColumn();
+		tablehandling.printColumn();
 		//tablehandling.assignment1();
 		//tablehandling.assignment2();
-		tablehandling.assignment3();
+		//tablehandling.assignment3();
 		//tablehandling.driverQuitAndClose();
 		
 
